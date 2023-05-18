@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+* {
+    text-align: center;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center th {
+    padding: 40px;
+}
+
+body {
+background-color:#EFAD9F;
+}
+</style>
+
+<body><br><br>
+    <h1><b>Unit Converter</b></h1>
+    <h2><i>millimeters to different units</i></h2>
+<table class="center">
+    <tr>
+        <th style="background-color:#FFF8DC">Millimeters
+            <p><input type="text" id="millimeters"></p>
+            <input type="button" class="btn btn-info" onClick="MMtoCM()" value="To Centimeters">
+            <input type="button" class="btn btn-info" onClick="MMtoM()" value="To Meters">
+            <input type="button" class="btn btn-info" onClick="MMtoKM()" value="To Kilometers">
+        </th>
+    </tr>
+    <p id="id1"></p>
+        <script>
+        function MMtoCM(){
+        var x = (document.getElementById('millimeters').value);
+         var answer = x / 0.1;
+        document.getElementById('id1').innerHTML = "The answer is " + answer + "centimeters";
+    }
+
+    function MMtoM(){
+        var x = (document.getElementById('millimeters').value);
+         var answer = x / 1000;
+        document.getElementById('id1').innerHTML = "The answer is " + answer + "meters";
+    }
+
+    function MMtoKM(){
+        var x = (document.getElementById('millimeters').value);
+         var answer = x / 1000000;
+        document.getElementById('id1').innerHTML = "The answer is " + answer + "kilometers";
+
+    }
+    </script>
+</table>
+</body>
